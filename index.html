@@ -310,10 +310,10 @@ footer{padding:34px 0 calc(96px + env(safe-area-inset-bottom,0px));border-top:1p
 </nav>
 
 <header class="hero" id="topo">
-  <!-- 3 vídeos em loop: assets/hero-1.mp4, hero-2.mp4, hero-3.mp4. Enquanto não existirem, aparecem as cenas animadas. -->
-  <div class="hv on"><div class="sc sc-beam"></div><video muted playsinline preload="auto" data-src="assets/hero-1.mp4"></video></div>
-  <div class="hv"><div class="sc sc-roll"></div><video muted playsinline preload="metadata" data-src="assets/hero-2.mp4"></video></div>
-  <div class="hv"><div class="sc sc-pulse"><i></i><i></i><i></i></div><video muted playsinline preload="metadata" data-src="assets/hero-3.mp4"></video></div>
+  <!-- 3 vídeos em loop: assets/hero-1.mp4, hero-2.mp4, hero-3.mp4. Se o arquivo não carregar, aparecem as cenas animadas. -->
+  <div class="hv on"><div class="sc sc-beam"></div><video muted playsinline preload="auto" poster="assets/poster-1.jpg" data-src="assets/hero-1.mp4"></video></div>
+  <div class="hv"><div class="sc sc-roll"></div><video muted playsinline preload="metadata" poster="assets/poster-2.jpg" data-src="assets/hero-2.mp4"></video></div>
+  <div class="hv"><div class="sc sc-pulse"><i></i><i></i><i></i></div><video muted playsinline preload="metadata" poster="assets/poster-3.jpg" data-src="assets/hero-3.mp4"></video></div>
   <div class="hero-glow"></div>
   <div class="hero-in">
     <div class="hero-txt">
