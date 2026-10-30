@@ -1,0 +1,473 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Matrin&Cia Manaus</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Conserto e manutenção de matrin (paleteira), talha, thifor e equipamentos hidráulicos em Manaus. Visita e orçamento gratuitos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap">
+<style>
+/* Estrutura da Escola do Mecânico (escuro, seções centralizadas, hero cheio, cards que sobem, formulário em etapas) na paleta verde-limão/grafite. */
+:root{
+  --bg:#1F1F1F; --bg2:#262626; --card:#2D2D2D; --line:rgba(255,255,255,.09);
+  --red:#D7F34A; --red-deep:#C4E23A; --red-hot:#E6FA7A; --red-glow:rgba(215,243,74,.18);
+  --ink:#F5F5F5; --mut:#A3A3A3;
+  --light:#FAFAFA; --lt-ink:#1F1F1F; --lt-mut:#525252; --lt-line:#E5E5E5;
+  --r:12px; --r-sm:8px; --r-lg:16px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px;background:var(--bg)}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:Sora,Inter,system-ui,sans-serif;line-height:1.15;letter-spacing:-.02em;text-wrap:balance}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.grad{background:linear-gradient(90deg,var(--red-hot),var(--red));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
+:focus-visible{outline:3px solid #7FB0FF;outline-offset:3px;border-radius:4px}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:var(--r-sm);font-weight:700;font-size:15px;border:0;cursor:pointer;font-family:inherit;transition:.2s;white-space:nowrap;min-height:48px}
+.btn-red{background:var(--red);color:#161616}
+.btn-red:hover{background:var(--red-hot);transform:translateY(-2px);box-shadow:0 10px 30px rgba(215,243,74,.32)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--red);color:var(--red-hot)}
+.btn-line{background:transparent;color:var(--ink);border:1px solid rgba(255,255,255,.3)}
+.btn-line:hover{border-color:var(--red);color:var(--red-hot)}
+.btn[disabled]{opacity:.4;cursor:not-allowed;transform:none;box-shadow:none}
+.light .btn-line{color:var(--lt-ink);border-color:rgba(0,0,0,.25)}
+.light .btn-line:hover{border-color:#5C7A00;color:#5C7A00}
+
+/* menu */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:rgba(10,10,10,.45);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid transparent;transition:.3s}
+nav.scrolled{background:rgba(10,10,10,.92);border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+/* Logo: trocar o wordmark pelo arquivo da logo Matrin&Cia quando chegar */
+.brand{display:flex;align-items:center;gap:10px;font-family:Sora,sans-serif;font-weight:800;font-size:18px;line-height:1.1;letter-spacing:.01em}
+.brand b{color:var(--red)}
+.brand small{display:block;border-left:1px solid rgba(255,255,255,.3);padding-left:10px;font-family:Inter,sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.14em;color:var(--mut);line-height:1.3}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:500;color:#d4d4d4}
+.nav-links a:not(.btn):hover{color:var(--red-hot)}
+.nav-links .btn{padding:10px 18px;font-size:14px;min-height:42px}
+@media(max-width:860px){.nav-links a:not(.btn){display:none}.brand small{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 0 150px;overflow:hidden;background:var(--bg)}
+/* Foto ou vídeo de fundo entra aqui: .hv > video ou img */
+.hero::before{content:"";position:absolute;inset:0;background:
+  linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/56px 56px,
+  linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/56px 56px;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 45%,#000,transparent 72%);mask-image:radial-gradient(ellipse at 50% 45%,#000,transparent 72%)}
+.hero-glow{position:absolute;left:50%;top:28%;width:780px;max-width:140%;height:460px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(215,243,74,.28),transparent);pointer-events:none;filter:blur(20px)}
+.hero-fade{position:absolute;left:0;right:0;bottom:0;height:210px;pointer-events:none;background:linear-gradient(180deg,rgba(10,10,10,0),var(--bg))}
+.hero-in{position:relative;z-index:3;max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#f0f0f0}
+.pill b{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(215,243,74,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(215,243,74,0)}100%{box-shadow:0 0 0 0 rgba(215,243,74,0)}}
+.hero h1{font-size:clamp(34px,6vw,66px);font-weight:800;margin:22px 0 18px}
+.hero .sub{font-size:clamp(16px,2vw,19px);color:#d4d4d4;max-width:640px;margin:0 auto}
+.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.hero-meta{margin-top:26px;font-size:13px;color:var(--mut)}
+.scroll-hint{position:absolute;z-index:3;bottom:26px;left:50%;transform:translateX(-50%);width:22px;height:36px;border:2px solid rgba(255,255,255,.4);border-radius:12px}
+.scroll-hint::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--red);animation:sc 1.6s infinite}
+@keyframes sc{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(12px)}}
+
+/* faixa */
+.marq{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;white-space:nowrap;padding:16px 0}
+.marq div{display:inline-block;animation:mq 38s linear infinite;font-family:Sora,sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.marq span{margin:0 22px}.marq span::after{content:"◆";margin-left:44px;color:var(--red);font-size:9px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* seções */
+section{padding:92px 0;text-align:center}
+section.alt{background:var(--bg2)}
+section.light{background:var(--light);color:var(--lt-ink)}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red-hot);margin-bottom:14px}
+.light .tag{color:#5C7A00}
+.head{max-width:720px;margin:0 auto 46px}
+.head h2{font-size:clamp(28px,4vw,44px);font-weight:800}
+.head p{margin-top:14px;color:var(--mut);font-size:17px}
+.light .head p{color:var(--lt-mut)}
+.grid{display:grid;gap:18px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px 24px;transition:.25s;display:flex;flex-direction:column;align-items:center}
+.card:hover{transform:translateY(-5px);border-color:rgba(215,243,74,.55);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.light .card{background:#fff;border-color:var(--lt-line)}
+.light .card:hover{box-shadow:0 18px 40px rgba(10,10,10,.12)}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{color:var(--mut);font-size:15px}
+.light .card p{color:var(--lt-mut)}
+.area{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#161616;background:linear-gradient(90deg,var(--red-deep),var(--red));padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.nota{margin-top:26px;font-size:14px;color:var(--lt-mut)}
+
+/* carrossel no celular */
+@media(max-width:860px){
+  .g4.snap{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:14px;-webkit-overflow-scrolling:touch}
+  .g4.snap .card{flex:0 0 82%;scroll-snap-align:start}
+}
+@media(min-width:600px) and (max-width:860px){.g4.snap .card{flex-basis:46%}}
+
+/* números */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:900px;margin:0 auto}
+.stat b{display:block;font-family:Sora,sans-serif;font-size:clamp(34px,5vw,52px);font-weight:800}
+.stat span{font-size:14px;color:var(--mut)}
+@media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr);gap:28px 18px}}
+
+/* equipamentos */
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:860px;margin:0 auto}
+.chips li{list-style:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:10px 20px;font-weight:600;font-size:15px;transition:.2s}
+.chips li:hover{border-color:var(--red);color:var(--red-hot)}
+.chips li.main{background:linear-gradient(90deg,var(--red-deep),var(--red));border-color:transparent;color:#161616}
+
+/* rack */
+.rack-box{max-width:820px;margin:0 auto;text-align:left;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--card);overflow:hidden}
+.rack-big{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line);text-align:center}
+.rack-big div{padding:24px 12px;border-right:1px solid var(--line)}
+.rack-big div:last-child{border-right:0}
+.rack-big b{display:block;font-family:Sora,sans-serif;font-size:clamp(26px,5vw,40px);font-weight:800;color:var(--red-hot);line-height:1.1}
+.rack-big span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.rack-box dl{display:grid;grid-template-columns:1fr 1fr;padding:6px 24px 10px;column-gap:40px}
+.rack-box dl div{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.rack-box dt{color:var(--mut)}
+.rack-box dd{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:640px){.rack-box dl{grid-template-columns:1fr}}
+.uses{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:26px 0 28px;list-style:none}
+.uses li{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--mut)}
+
+/* foto reservada */
+.ph{width:100%;max-width:960px;margin:34px auto 0;aspect-ratio:16/7;border-radius:var(--r-lg);border:1px dashed rgba(255,255,255,.22);background:repeating-linear-gradient(135deg,transparent 0 16px,rgba(215,243,74,.08) 16px 32px),var(--card);display:grid;place-items:center;padding:16px;font-size:13px;color:var(--mut);letter-spacing:.04em}
+.light .ph{border-color:rgba(0,0,0,.22);background:repeating-linear-gradient(135deg,transparent 0 16px,rgba(120,150,0,.08) 16px 32px),#fff;color:var(--lt-mut)}
+@media(max-width:640px){.ph{aspect-ratio:4/3}}
+
+/* como funciona */
+.steps .card{position:relative}
+.num{font-family:Sora,sans-serif;font-weight:800;font-size:46px;line-height:1;margin-bottom:10px}
+@media(max-width:860px){.steps{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{max-width:760px;margin:0 auto;text-align:center}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px;transition:.2s}
+.faq details[open]{border-color:rgba(215,243,74,.55)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 54px;font-weight:600;font-size:16px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--red-hot);font-size:22px;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 28px 22px;color:var(--mut);font-size:15px}
+
+/* fechamento / formulário */
+.closing{background:radial-gradient(ellipse at 50% 0,rgba(215,243,74,.16),transparent 60%),var(--bg)}
+.closing h2{font-size:clamp(30px,4.4vw,48px);font-weight:800}
+.lead{color:var(--mut);font-size:17px;max-width:600px;margin:14px auto 0}
+.info{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin:30px 0 22px;font-size:15px;color:var(--mut)}
+.info b{display:block;color:var(--ink)}
+.map-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:38px}
+.formbox{min-width:0;max-width:560px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 26px;text-align:left;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.dots{display:flex;gap:6px;margin-bottom:20px}
+.step-dot{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.12)}
+.step-dot.active{background:linear-gradient(90deg,var(--red-hot),var(--red))}
+.err{min-height:0;display:none;background:rgba(230,57,70,.12);border:1px solid rgba(230,57,70,.45);color:#ffb4ba;border-radius:var(--r-sm);padding:10px 12px;font-size:13px;margin-bottom:12px}
+#formSteps{display:grid;grid-template-columns:minmax(0,1fr)}
+.fs{min-width:0;grid-area:1/1;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .2s}
+.fs.on{visibility:visible;opacity:1;pointer-events:auto}
+.fs h3{font-size:21px;margin-bottom:6px}
+.q{color:var(--mut);font-size:14px;margin-bottom:16px}
+.sub-q{font-weight:600;font-size:14px;margin:6px 0 10px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.opt{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:10px;padding:13px 12px;color:var(--ink);font:600 14px Inter,sans-serif;cursor:pointer;text-align:center;transition:.2s;min-height:48px}
+.opt:hover{border-color:var(--red)}
+.opt.sel{background:rgba(215,243,74,.16);border-color:var(--red);color:#fff}
+@media(max-width:420px){.opts{grid-template-columns:1fr}}
+.field{display:block;margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field input,.field textarea{width:100%;background:#fff;border:1px solid transparent;border-radius:10px;padding:14px 16px;font:500 15px Inter,sans-serif;color:#0A0A0A;outline:none;min-height:48px}
+.field input:focus,.field textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(215,243,74,.28)}
+.field textarea{min-height:76px;resize:vertical}
+.nav2{display:flex;gap:10px;margin-top:6px}
+.nav2 .btn{flex:1}
+.legal{margin-top:14px;font-size:12px;color:var(--mut);text-align:center}
+
+footer{padding:34px 0 calc(96px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--mut)}
+
+/* WhatsApp fixo */
+.wpp{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+
+/* anima ao rolar, sempre visível em repouso */
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marq div,.pill b,.scroll-hint::after{animation:none}.card,.btn{transition:none}}
+@media(max-width:860px){section{padding:68px 0}}
+@media(max-width:860px){.g4:not(.snap){grid-template-columns:repeat(2,1fr)}}
+</style>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#topo" aria-label="Matrin&Cia, início">MATRIN<b>&amp;</b>CIA<small>ANTIGA SERTI<br>MANAUS · AM</small></a>
+    <div class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#equipamentos">Equipamentos</a>
+      <a href="#rack">Rack de roletes</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-red" href="#orcamento">Orçamento grátis</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="topo">
+  <div class="hero-glow"></div>
+  <div class="hero-in">
+    <span class="pill"><b></b>Visita e orçamento gratuitos em Manaus</span>
+    <h1>Conserto de matrin e paleteira em <em class="grad">Manaus</em></h1>
+    <p class="sub">Matrin e paleteira são o mesmo equipamento. Nosso técnico faz o diagnóstico no local e você recebe o orçamento por escrito, válido por 15 dias.</p>
+    <div class="hero-cta">
+      <a class="btn btn-red" href="#orcamento">Pedir orçamento gratuito</a>
+      <a class="btn btn-line" href="https://wa.me/5592991123249" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+    <p class="hero-meta">Mais de 10 anos atendendo a indústria e a logística de Manaus</p>
+  </div>
+  <div class="hero-fade"></div>
+  <div class="scroll-hint" aria-hidden="true"></div>
+</header>
+
+<div class="marq" aria-hidden="true"><div>
+  <span>Matrin</span><span>Paleteira</span><span>Talha de elevação</span><span>Thifor</span><span>Empilhadeira manual</span><span>Macaco hidráulico</span><span>Bomba hidráulica</span><span>Rack de roletes</span>
+  <span>Matrin</span><span>Paleteira</span><span>Talha de elevação</span><span>Thifor</span><span>Empilhadeira manual</span><span>Macaco hidráulico</span><span>Bomba hidráulica</span><span>Rack de roletes</span>
+</div></div>
+
+<section class="light" id="servicos">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">O que fazemos na matrin</span>
+      <h2>Revisão completa, sistema por sistema</h2>
+      <p>Cada matrin passa por três avaliações: hidráulica, mecânica e puxador. O orçamento já sai dividido assim, para você saber pelo que está pagando.</p>
+    </div>
+    <div class="grid g4 snap">
+      <article class="card"><span class="area">Hidráulico</span><h3>Levanta e segura a carga</h3><p>Desmontagem, troca ou fabricação de peças, remodelagem das cavidades das esferas, lavagem a diesel e teste de capacidade em sistema de alta pressão.</p></article>
+      <article class="card"><span class="area">Mecânico</span><h3>Garfo, eixos e rodas</h3><p>Embuchamento dos eixos, desempeno e alinhamento do garfo, soldagem, troca de pinos, anéis e mancais, usinagem e lubrificação.</p></article>
+      <article class="card"><span class="area">Comando e puxador</span><h3>Cabo, corrente e alívio</h3><p>Corte e realocação do cabo, emenda da corrente, soldagem e fabricação de parafuso regulador de alívio.</p></article>
+      <article class="card"><span class="area">Peças e acabamento</span><h3>Troca e pintura</h3><p>Rodas de carga e direcionais, rolamentos, molas, óleo hidráulico e pintura. Marcas: Paletrans, BYG, Menegotti, Still, Vonder, Linde, Saur, Bovenal, Marcon e Hyster.</p></article>
+    </div>
+    <div class="ph" role="img" aria-label="Espaço reservado para foto">FOTO · matrin restaurada (antes e depois)</div>
+  </div>
+</section>
+
+<section id="numeros" style="padding-block:56px">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b class="grad">10+</b><span>anos em Manaus</span></div>
+      <div class="stat"><b class="grad">R$ 0</b><span>visita e diagnóstico</span></div>
+      <div class="stat"><b class="grad">15</b><span>dias de validade do orçamento</span></div>
+      <div class="stat"><b class="grad">3 t</b><span>de capacidade nas matrins que atendemos</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="equipamentos">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Além da matrin</span>
+      <h2>Também consertamos</h2>
+      <p>Equipamentos hidráulicos e pneumáticos. Já fizemos de caneta ortodôntica a manete de comando de ar em navio.</p>
+    </div>
+    <ul class="chips">
+      <li class="main">Matrin / paleteira</li><li>Talha de elevação</li><li>Thifor</li><li>Empilhadeira hidráulica manual</li><li>Macaco hidráulico</li><li>Bomba hidráulica manual</li><li>Compressor</li><li>Esmerilhadeira</li><li>Martelete</li><li>Furadeira pneumática</li><li>Chave de impacto</li>
+    </ul>
+  </div>
+</section>
+
+<section id="rack">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Fabricação própria</span>
+      <h2>Rack de roletes livres sob medida</h2>
+      <p>Esteira transportadora que leva carga pesada do avião para o caminhão e do caminhão para o armazém. Projetada e fabricada pela nossa equipe, em aço carbono, no tamanho que a sua operação pede.</p>
+    </div>
+    <div class="rack-box">
+      <div class="rack-big">
+        <div><b>3 t</b><span>capacidade</span></div>
+        <div><b>2,94 m</b><span>comprimento</span></div>
+        <div><b>700 mm</b><span>largura</span></div>
+      </div>
+      <dl>
+        <div><dt>Material</dt><dd>aço carbono SAE 1020</dd></div>
+        <div><dt>Chapa</dt><dd>3/16 pol.</dd></div>
+        <div><dt>Roletes livres</dt><dd>a cada 250 mm</dd></div>
+        <div><dt>Stoppers</dt><dd>2 (frente e atrás)</dd></div>
+        <div><dt>Rampas de entrada</dt><dd>2 inclinadas</dd></div>
+        <div><dt>Articuladores</dt><dd>2 laterais</dd></div>
+      </dl>
+    </div>
+    <ul class="uses" aria-label="Onde é utilizado"><li>Aeroporto</li><li>Porto</li><li>Centro de distribuição</li><li>Transportadora</li></ul>
+    <a class="btn btn-red" href="#orcamento">Pedir proposta do rack</a>
+    <div class="ph" role="img" aria-label="Espaço reservado para foto">FOTO · rack instalado no caminhão</div>
+  </div>
+</section>
+
+<section class="light" id="como">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Como funciona</span>
+      <h2>Do primeiro contato ao equipamento de volta</h2>
+    </div>
+    <div class="grid g4 steps">
+      <article class="card"><div class="num grad">1</div><h3>Você chama</h3><p>Pelo formulário ou pelo WhatsApp, informando o equipamento e o problema.</p></article>
+      <article class="card"><div class="num grad">2</div><h3>Visita gratuita</h3><p>Nosso técnico vai até você, avalia hidráulica, mecânica e puxador e anota o que precisa ser feito.</p></article>
+      <article class="card"><div class="num grad">3</div><h3>Orçamento por escrito</h3><p>Valores, prazo de entrega, forma de pagamento e garantia, com validade de 15 dias.</p></article>
+      <article class="card"><div class="num grad">4</div><h3>Conserto e entrega</h3><p>Aprovado o orçamento, o equipamento é recolhido, consertado e testado antes de voltar.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="duvidas">
+  <div class="wrap">
+    <div class="head"><span class="tag">Dúvidas frequentes</span><h2>Antes de chamar</h2></div>
+    <div class="faq">
+      <details><summary>Matrin e paleteira são a mesma coisa?</summary><p>Sim. Matrin é o nome mais usado em Manaus para a paleteira hidráulica manual, também chamada de pallet truck. Consertamos os dois, de qualquer marca.</p></details>
+      <details><summary>A visita e o orçamento são gratuitos?</summary><p>Sim. O técnico avalia o equipamento no local, sem cobrança, e o orçamento chega por escrito.</p></details>
+      <details><summary>Por quanto tempo o orçamento vale?</summary><p>Todo orçamento tem validade de 15 dias. Passado esse prazo, é só pedir a renovação.</p></details>
+      <details><summary>Como funciona o pagamento?</summary><p>Prazo de entrega, forma de pagamento e garantia aparecem no orçamento. Para empresas, combinamos condições de prazo conforme o caso.</p></details>
+      <details><summary>Vocês fabricam equipamentos?</summary><p>Fabricamos rack de roletes livres sob medida. Se a sua operação precisa de outra solução em aço, fale com a gente.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing" id="orcamento">
+  <div class="wrap">
+    <span class="tag">Orçamento gratuito</span>
+    <h2>Conte o que está <em class="grad">acontecendo</em></h2>
+    <p class="lead">Três passos rápidos. Seus dados de contato só entram no último.</p>
+    <div class="info">
+      <div><b>Endereço</b>Rua Itatiaia, 66, Coroado 3<br>Manaus, AM · CEP 69082-260</div>
+      <div><b>Responsável técnico</b>João Pinto</div>
+      <div><b>WhatsApp</b>(92) 99112-3249</div>
+    </div>
+    <div class="map-btns">
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Rua+Itatiaia+66+Coroado+Manaus" target="_blank" rel="noopener">Como chegar</a>
+    </div>
+
+    <form class="formbox" id="lead" novalidate>
+      <div class="dots" aria-hidden="true"><i class="step-dot active"></i><i class="step-dot"></i><i class="step-dot"></i></div>
+      <div class="err" id="err" role="alert"></div>
+      <div id="formSteps">
+        <div class="fs on" data-step="0">
+          <h3>Qual equipamento?</h3>
+          <p class="q">Escolha o que precisa de conserto.</p>
+          <div class="opts" data-group="equip">
+            <button type="button" class="opt" aria-pressed="false" data-val="Matrin / paleteira">Matrin / paleteira</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="Talha de elevação">Talha de elevação</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="Thifor">Thifor</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="Empilhadeira hidráulica manual">Empilhadeira manual</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="Macaco ou bomba hidráulica">Macaco / bomba hidráulica</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="Rack de roletes livres">Rack de roletes livres</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="Compressor ou ferramenta">Compressor / ferramenta</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="Outro equipamento">Outro</button>
+          </div>
+        </div>
+
+        <div class="fs" data-step="1">
+          <h3>O que está acontecendo?</h3>
+          <p class="q">Pode marcar mais de um.</p>
+          <div class="opts" data-group="prob" data-multi="1">
+            <button type="button" class="opt" aria-pressed="false" data-val="não levanta ou não segura a carga">Não levanta ou não segura</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="vazando óleo">Vazando óleo</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="rodas travando ou gastas">Rodas travando ou gastas</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="puxador ou cabo com defeito">Puxador ou cabo</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="garfo empenado ou trincado">Garfo empenado</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="não sei dizer">Não sei dizer</button>
+          </div>
+          <p class="sub-q">Qual a urgência?</p>
+          <div class="opts" data-group="urg" style="grid-template-columns:repeat(3,1fr);margin-bottom:0">
+            <button type="button" class="opt" aria-pressed="false" data-val="parou a operação (urgente)">Parou a operação</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="nesta semana">Nesta semana</button>
+            <button type="button" class="opt" aria-pressed="false" data-val="sem pressa">Sem pressa</button>
+          </div>
+        </div>
+
+        <div class="fs" data-step="2">
+          <h3>Como falamos com você?</h3>
+          <p class="q">Ao enviar, o WhatsApp abre com o seu pedido pronto.</p>
+          <div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" autocomplete="name" placeholder="Nome e sobrenome"></div>
+          <div class="field"><label for="empresa">Empresa (opcional)</label><input id="empresa" name="empresa" autocomplete="organization"></div>
+          <div class="field"><label for="tel">WhatsApp</label><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(92) 9 0000-0000"></div>
+          <div class="field" style="margin-bottom:0"><label for="obs">Quer acrescentar algo? (opcional)</label><textarea id="obs" name="obs" placeholder="Marca, quantidade, quando começou..."></textarea></div>
+        </div>
+      </div>
+      <div class="nav2" style="margin-top:20px">
+        <button type="button" class="btn btn-line" id="back" hidden>Voltar</button>
+        <button type="button" class="btn btn-red" id="next" disabled>Continuar</button>
+        <a class="btn btn-red" id="send" href="#" target="_blank" rel="noopener" hidden>Enviar pelo WhatsApp</a>
+      </div>
+      <p class="legal">Usamos seus dados apenas para responder ao pedido de orçamento.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Matrin&amp;Cia, antiga SERTI Serviços Técnicos Industriais · CNPJ 07.562.725/0001-12 · Manaus, AM</div>
+</footer>
+
+<a class="btn btn-red wpp" href="https://wa.me/5592991123249?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Matrin%26Cia." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">WhatsApp</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>30);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var panels=[].slice.call(document.querySelectorAll('.fs'));
+  var dots=[].slice.call(document.querySelectorAll('.step-dot'));
+  var next=document.getElementById('next'), back=document.getElementById('back'), send=document.getElementById('send');
+  var err=document.getElementById('err');
+  var cur=0, state={equip:'',urg:'',prob:[]};
+
+  function ready(){
+    if(cur===0) return !!state.equip;
+    if(cur===1) return !!state.urg;
+    return true;
+  }
+  function render(){
+    panels.forEach(function(p,i){p.classList.toggle('on',i===cur);});
+    dots.forEach(function(d,i){d.classList.toggle('active',i<=cur);});
+    back.hidden=cur===0;
+    next.hidden=cur===2;
+    send.hidden=cur!==2;
+    next.disabled=!ready();
+    err.style.display='none';
+  }
+  document.querySelectorAll('.opts').forEach(function(g){
+    g.addEventListener('click',function(e){
+      var b=e.target.closest('.opt'); if(!b||!g.contains(b)) return;
+      var key=g.getAttribute('data-group'), multi=g.hasAttribute('data-multi'), v=b.getAttribute('data-val');
+      if(multi){
+        var on=!b.classList.contains('sel'); b.classList.toggle('sel',on); b.setAttribute('aria-pressed',on);
+        state[key]=[].slice.call(g.querySelectorAll('.opt.sel')).map(function(x){return x.getAttribute('data-val');});
+      }else{
+        g.querySelectorAll('.opt').forEach(function(x){x.classList.remove('sel');x.setAttribute('aria-pressed','false');});
+        b.classList.add('sel'); b.setAttribute('aria-pressed','true'); state[key]=v;
+      }
+      next.disabled=!ready();
+    });
+  });
+  next.addEventListener('click',function(){if(ready()&&cur<2){cur++;render();}});
+  back.addEventListener('click',function(){if(cur>0){cur--;render();}});
+  document.getElementById('lead').addEventListener('submit',function(e){e.preventDefault();});
+
+  send.addEventListener('click',function(e){
+    var nome=document.getElementById('nome').value.trim();
+    var tel=document.getElementById('tel').value;
+    function fail(m){e.preventDefault();err.textContent=m;err.style.display='block';}
+    if(nome.length<2) return fail('Informe seu nome.');
+    if(tel.replace(/\D/g,'').length<10) return fail('Informe um WhatsApp com DDD.');
+    var empresa=document.getElementById('empresa').value.trim();
+    var obs=document.getElementById('obs').value.trim();
+    var lines=['Olá! Vim pelo site da Matrin&Cia e gostaria de um orçamento gratuito.','',
+      'Equipamento: '+state.equip,
+      'Problema: '+(state.prob.length?state.prob.join(', '):'não informado'),
+      'Urgência: '+state.urg];
+    if(obs) lines.push('Observações: '+obs);
+    lines.push('','Nome: '+nome);
+    if(empresa) lines.push('Empresa: '+empresa);
+    lines.push('WhatsApp: '+tel);
+    /* Integração futura: enviar este mesmo payload ao Capta antes de abrir o WhatsApp. */
+    send.href='https://wa.me/5592991123249?text='+encodeURIComponent(lines.join('\n'));
+  });
+  render();
+})();
+</script>
+
+</body></html>
